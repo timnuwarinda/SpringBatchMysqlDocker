@@ -1,0 +1,21 @@
+version: "2"
+services:
+  spring-batch:
+    image: spring-batch
+    ports:
+      - "8081:8081"
+    networks:
+      - backend
+    depends_on:
+      - mysqldb
+
+  mysqldb:
+    image: mysql:8
+    networks:
+      - backend
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_DATABASE=springbatchdb
+
+networks:
+  backend:
