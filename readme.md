@@ -8,6 +8,8 @@ Open Project in Intellij IDE or any other IDE
 
 Open the `terminal` via Intellij and run the following commands
 
+    $ ./mvnw install
+    
     $ docker build . -t spring-batch
     
     $ docker-compose up

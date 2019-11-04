@@ -4,6 +4,7 @@ services:
     image: spring-batch
     ports:
       - "8081:8081"
+    restart: always
     networks:
       - backend
     depends_on:
